@@ -34,17 +34,19 @@ Built as part of my professional portfolio to demonstrate my approach to front-e
 
 📦 Project Structure (planned)
 
+```txt
 src/
  ├── app/
- │    ├── core/          # singleton services, interceptors, guards
- │    ├── shared/        # reusable UI components, pipes, directives
- │    ├── features/
- │    │     ├── auth/
- │    │     ├── dashboard/
- │    │     ├── users/
- │    │     ├── settings/
- │    ├── app-routing.module.ts
- │    ├── app.component.ts
+ │   ├── core/           # singleton services, interceptors, guards
+ │   ├── shared/         # reusable UI components, pipes, directives
+ │   ├── features/
+ │   │   ├── auth/
+ │   │   ├── dashboard/
+ │   │   ├── users/
+ │   │   └── settings/
+ │   ├── app-routing.module.ts
+ │   └── app.component.ts
+```
 
  ⸻
 
