@@ -1,0 +1,23 @@
+<mat-card>
+  <div style="padding: 0 1rem 1rem">
+    <h2>Settings</h2>
+
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Display name</mat-label>
+        <input matInput formControlName="displayName" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+
+      <mat-slide-toggle formControlName="darkMode"> Dark mode </mat-slide-toggle>
+
+      <div class="actions">
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Save</button>
+      </div>
+    </form>
+  </div>
+</mat-card>

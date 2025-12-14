@@ -13,6 +13,10 @@ export const DASHBOARD_ROUTES: Routes = [
         path: "users",
         loadChildren: () => import("../users/users.routes").then((m) => m.USERS_ROUTES),
       },
+      {
+        path: "settings",
+        loadChildren: () => import("../settings/settings.routes").then((m) => m.SETTINGS_ROUTES),
+      },
     ],
   },
 ];
