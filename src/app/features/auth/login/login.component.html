@@ -12,6 +12,10 @@
       <input matInput [(ngModel)]="password" name="password" type="password" />
     </mat-form-field>
 
+    <p *ngIf="error" style="margin: 0 0 1rem; color: #f44336;">
+      {{ error }}
+    </p>
+
     <button mat-raised-button color="primary" class="full-width">Login</button>
   </form>
 </mat-card>
