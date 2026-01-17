@@ -1,0 +1,11 @@
+@use './colors' as *;
+
+body {
+  background-color: $background;
+  color: $text-primary;
+}
+
+.card {
+  background: $surface;
+  border: 1px solid $border;
+}

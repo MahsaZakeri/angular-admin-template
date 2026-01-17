@@ -1,30 +1,25 @@
-import { Injectable, signal } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-const TOKEN_KEY = "token_key";
+const TOKEN_KEY = 'auth_token';
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class AuthService {
-  private _isAuthed = signal<boolean>(this.hasToken());
+  login(email: string, password: string): boolean {
+    // Fake credential rule for now
+    const okEmail = email.toLowerCase() === 'mahsa@test.com';
+    const okPassword = password === 'Password123';
 
-  isAuthenticated() {
-    return this._isAuthed();
-  }
+    if (!okEmail || !okPassword) return false;
 
-  login(email: string, password: string) {
-    //TODO: mock login, replace with real API
-    if (!email || !password) return false;
-
-    localStorage.setItem(TOKEN_KEY, "mock-token");
-    this._isAuthed.set(true);
+    localStorage.setItem(TOKEN_KEY, 'fake-jwt-token');
     return true;
   }
 
   logout() {
     localStorage.removeItem(TOKEN_KEY);
-    this._isAuthed.set(false);
   }
 
-  private hasToken(): boolean {
+  isAuthenticated(): boolean {
     return !!localStorage.getItem(TOKEN_KEY);
   }
 }

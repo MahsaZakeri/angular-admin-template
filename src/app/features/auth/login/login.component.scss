@@ -1,10 +1,20 @@
-mat-card {
-  width: 360px;
-  margin: 4rem auto;
-  padding: 2rem;
+@use '../../../../styles/theme/colors' as *;
+
+.card {
+  max-width: 420px;
+  margin: 64px auto;
+  padding: 16px;
 }
 
-.full-width {
+.full {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
+}
+
+.error-message {
+  color: $error;
+  background: $error-bg;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
